@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Appointment Booking System </h1> <img id="usr" src="https://cdn-icons-png.flaticon.com/512/1572/1572132.png" alt="">
+        </div>
+        <form action="/create-list" method="POST">
+            <input type="text" name="pname" placeholder="Enter Patient name" required>
+            <input type="text" name="dname" placeholder="Enter Doctor name" required>
+            <input type="time" name="time" required>
+            <button type="submit">Add Appointment</button>
+        </form>
+        <div>
+            <ul>
+                   
+                <% for (let i of contact_list) { %> 
+                   <div class="contact"> 
+                        <li>
+                            <img id="usr" src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="">
+                            <p class="do">Patient Name : <%= i.pname %></p>
+                            <p>Doctor name : <%= i.dname %></p>
+                            <p class="time"><%= i.time %></p>
+                        </li>
+                        <div class="delete-list">
+                            <a href="/delete-list/?id=<%= i._id %>">
+                                <!-- delete -->
+                                <img src="https://icon-library.com/images/cancel-icon/cancel-icon-2.jpg" width="30px" alt="">
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+            </ul>
+        </div>
+
+        </div>
+        
+        <script type="text/javascript" src="/js/home.js"></script>
+        <script>
+            function validate(params) {
+              name =  $(#txtName).val();
+              if(name=""){
+                alert("please enter the name");
+                $(#txtName).focus();
+              }
+
+                }
+            }
+        </script>
+    </body>
+</html>

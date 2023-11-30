@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    background-color: rgb(170, 221, 246);
+}
+.contact{
+    /* border: 2px solid yellow; */
+    margin-bottom: 10px;
+     font-size: larger; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    /* border-radius: 50px; */
+    background-color:rgb(170, 212, 246);
+}
+li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+}
+li p{
+    margin:0px 30px;
+}
+li > p{
+    color: black;
+}
+#usr{
+    height: 60px;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
